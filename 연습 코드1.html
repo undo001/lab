@@ -52,8 +52,9 @@
                         <input type ="text" id="'user_mail" size="10" value="asd@gmail.com">
                     </li>
                     <li>
+                        <!-- required 반드시 입력해야하는 속성 -->
                         <label for ="user_pw">비밀번호</label>
-                        <input type ="text" id="user_pw" size="10" value="비밀번호 입력하세요">
+                        <input type ="text" id="user_pw" size="10" value="" required>
                     </li>
                     <li>
                         <label for ="user_pwcheck">비밀번호 확인</label>
@@ -65,7 +66,7 @@
                 <legend><b>이벤트와</b> 새로운 소식</legend>
                 <input type="radio" name="mailing" id="mailing_y">
                 <label for="mailing_y">메일 수신</label>
-                <input type="radio" name="mailing" id="mailing_n">
+                <input type="radio" name="mailing" id="mailing_n" checked>
                 <label for="mailing_n">메일 수신 안 함</label>
             </fieldset>
             <br>
