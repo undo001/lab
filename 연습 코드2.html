@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang =ko>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            #fieldset1{
+                width:300px;
+                padding: 5px;
+                padding-bottom: 10px;
+                padding-right: 10px;
+                border: 2px solid #000000;
+            }
+        </style>
+        <style>
+            #fieldset2{
+                width:400px;
+                padding: 5px;
+                padding-bottom: 10px;
+                padding-right: 10px;
+                border: 2px solid #000000;
+            }
+        </style>
+        <style>
+            #fieldset3{
+                width:400px;
+                padding: 5px;
+                padding-bottom: 10px;
+                padding-right: 10px;
+                border: 2px solid #000000;
+            }
+        </style>
+        <style>
+            /* 버튼 이미지를 수직으로 정렬하기 위한 스타일 */
+           input[type="image"] {
+             vertical-align: middle;
+           }
+        </style>
+        <style>
+            #returnInfo {
+                border: 2px solid #000000; /* 태두리 스타일 및 색상을 설정합니다. */
+                padding: 10px; /* 태두리와 내용 사이에 간격을 조절합니다. */
+                width: 300px; /* 필요에 따라 너비를 조절합니다. */
+                margin: 0 auto;
+            }
+        </style>
+        <style>
+            #loginInfo{
+                border: 2px solid #000000; /* 태두리 스타일 및 색상을 설정합니다. */
+                padding: 10px; /* 태두리와 내용 사이에 간격을 조절합니다. */
+                width: 410px; /* 필요에 따라 너비를 조절합니다. */
+                padding-right: 10px ;
+            }
+        </style>
+        <style>
+            #loginFieldset{
+                border: 3px dashed #000000;
+                width: 40%;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset id="fieldset1">
+                <legend><b>스핀 박스</b> 숫자 입력</legend>
+                <ul>
+                    <li>
+                        <!-- min max 날짜나 시간의 범위를 제한할때 사용
+                        step 스핀 박스의 화살표를 클릭했을 때 증감시킬 크기를 지정
+                        value 기본적으로 표시할 날짜나 시간을 지정 -->
+                        <label><input type="checkbox" value="s_3">선물용 3kg</label>
+                        <input type="number" min="0" max="5">개
+                    </li>
+                    <li>
+                        <label><input type="Checkbox" value="s_5">선물용 5kg</label>
+                        <input type="number" min="0" max="3" value="1">개
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset id="fieldset2">
+                <legend><b>스핀 박스</b> 슬라이드 입력</legend>
+                <ul>
+                    <li>
+                        <label><input type="checkbox" value="s_3">가정용 3kg</label>
+                        <input type="range" min="0" max="5">개 (최대 5개)
+                    </li>
+                    <li>
+                        <label><input type="checkbox" value="s_5">가정용 5kg</label>
+                        <input type="range" min="0" max="3" value="1">개 (최대 3개)
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset id="fieldset3">
+                <legend>날짜 지정하기</legend>
+                <input type="date">
+                <input type="month">
+                <input type="week">
+            </fieldset>
+                <fieldset id="fieldset3">
+                <legend>시간 지정하기</legend>
+                <input type="time">
+                <input type="datetime-local">
+            </fieldset>
+
+            <fieldset id="loginFieldset">
+                <legend>로그인 창</legend>
+                <label>아이디: <input type="text" id="user_id" size="10"></label>
+                <label>비밀번호: <input type="password" id="user_pw" size="10"></label>
+                <input type="image" src="images/05/images/login.png" alt="로그인">
+                <p><input type="button" value="공고 창 열기" onclick="window.open('images/05/notice.html')"></p>
+
+            <div id="returnInfo">
+                <legend><b>반품 정보</b></legend>
+                <p>만일 수령한 상품에 문제가 있다면 즉시 <b>반품 신청</b>해 주세요.</p>
+                <p>반품 신청시 상품의 상태를 사진으로 첨부해 주세요.</p>
+                <p><input type="file"></p>
+            </div>
+            <br>
+            <div id="loginInfo">
+                <input type="hidden" name="url" id="url" value="사이트를 통한 직접 로그인">
+    	        <label>아이디: <input type="text" id="user_id" size="10"></label>
+                <label>비밀번호: <input type="password" id="user_pw" size="10"></label>
+                <input type="submit" value="로그인">
+            </div>
+            </fieldset>
+
+        </form>
+    </body>
+</html>

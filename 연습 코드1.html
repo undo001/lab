@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang =ko>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            #fieldset1{
+                width:300px;
+                padding: 5px;
+                padding-bottom: 20px;
+                padding-right: 30px;
+                border: 2px solid #1788d3;
+            }
+        </style>
+        <style>
+            #fieldset2{
+                width:300px;
+                padding: 5px;
+                padding-bottom: 20px;
+                padding-right: 30px;
+                border: 2px dashed #d10707;
+            }
+        </style>
+        <!-- <style> 이렇게 fieldset은 기본설정하고 다른 것만 바꿔도됨
+            fieldset {
+                width: 300px;
+                padding: 5px;
+                padding-bottom: 20px;
+                padding-right: 30px;
+            }
+    
+            #fieldset1 {
+                border: 2px solid #1788d3;
+            }
+    
+            #fieldset2 {
+                border: 2px dashed #d10707;
+            }
+        </style> --> 
+    </head>
+    <body>
+        <h1><b>회원 가입을 환영합니다</b></h1>
+        <form action="">
+            <fieldset id ="fieldset1">
+                <legend><b>사용자</b>정보</legend>                 
+                <ul>
+                    <li>
+                        <label for ="user_id">아이디 </label>
+                        <input type ="text" id="'user_id" size="16" value="아이디 입력하세요">
+                    </li>
+                    <li>
+                        <label for ="user_mail">이메일 </label>
+                        <input type ="text" id="'user_mail" size="10" value="asd@gmail.com">
+                    </li>
+                    <li>
+                        <!-- required 반드시 입력해야하는 속성 -->
+                        <label for ="user_pw">비밀번호</label>
+                        <input type ="text" id="user_pw" size="10" value="" required>
+                    </li>
+                    <li>
+                        <label for ="user_pwcheck">비밀번호 확인</label>
+                        <input type ="text" id="user_pwcheck" size="15">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset id="fieldset2">
+                <legend><b>이벤트와</b> 새로운 소식</legend>
+                <input type="radio" name="mailing" id="mailing_y">
+                <label for="mailing_y">메일 수신</label>
+                <input type="radio" name="mailing" id="mailing_n" checked>
+                <label for="mailing_n">메일 수신 안 함</label>
+            </fieldset>
+            <br>
+            <div id="buttons">
+                <input type="submit" value="가입하기">
+                <input type="reset" value="취소">
+            </div>
+        </form>                      
+    </body>
+</html>
